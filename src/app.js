@@ -10,6 +10,7 @@ const hbs = require('hbs')
 // add express
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // path.join gives us path to another folder as we can see in the second argumen.
 // if we print __dirname the it will give the path to directory of app.js
@@ -113,6 +114,6 @@ app.get('*', (req, res) => {
 
 
 // setting up localhost at port 3000
-app.listen(3000, () => {
-  console.log('Server is up on port 3000')
+app.listen(port, () => {
+  console.log('Server is up on port ' + port)
 })
